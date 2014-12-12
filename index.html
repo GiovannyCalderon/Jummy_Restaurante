@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+	<title>Jummy Restaurant</title>
+	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="css/jummy_global.css">
+	<link rel="stylesheet" href="css/pag_principal.css">
+	<script src="js/modernizr.custom.53754.js"></script>
+	<script src="js/prefixfree.min.js"></script>
+	
+	<div></div>
+
+	
+</head>
+<body>
+
+	<section id="contenedor">
+
+
+	<header>
+		<figure id="logo">
+			<img src="img/jummy_logo.png" alt="Jummy"/>
+			<a href="#"></a>
+		</figure>
+		
+				 <nav id="menu-nav">
+				 	<div id="menu-button">
+				 		<div id="menu-button-inner"></div>
+				 	</div>
+				 </nav>
+
+		<nav id="menu-restaurant">
+			<ul>
+				<li><a href="index.html"><h2>Jummy</h2><h5>Restaurante</h5></a></li>
+				<li><a href="menu.html"><h2>Menú</h2><h5>Buen Gusto</h5></a></li>
+				<li><a href="#"><h2>Eventos</h2><h5>Ven y Disfrútalo!</h5></a></li>
+				<li><a href="#"><h2>Contacto</h2><h5>Escribenos</h5></a></li>
+			</ul>
+		</nav>
+	</header>
+	<section class="contenido">
+		<article class="banner">
+			<figure class="imagen">
+				<img src="img/menu_principal.jpg" alt="imagen principal">
+			</figure>
+		</article>
+
+		<article class="secciones">
+			<div class="seccion">
+				<h2>Sabores</h2>
+				<p>In vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.
+				</p>
+				<a href="#">Descubra nuestra comida</a>
+			</div>
+
+			<div class="seccion">
+				<h2>Vegetariana</h2>
+				<p>In vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.
+				</p>
+				<a href="#">Descubra nuestra comida</a>
+			</div>
+
+			<div class="seccion" id="medio">
+				<h2>Comida para llevar</h2>
+				<p>In vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.
+				</p>
+				<a href="#">Descubra nuestra comida</a>			
+			</div>
+
+		</article>
+	</section>
+	<footer>
+		<p>
+			<strong>Jummy<span class="guion"></span>The Tasty Restaurant</strong>
+		</p>
+	</footer>
+	</section>
+		
+		<!--<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>-->
+
+		<script src="js/jquery.js"></script>
+		
+		<script>
+		/*inicio();*/
+		/*$(function(){
+
+		});*/
+			jQuery(function($) {
+                var open = false;
+
+                function resizeMenu() {
+                    if ($(this).width() < 480) {
+                        if (!open) {
+                            $("#menu-restaurant").hide();
+                        }
+                        $("#menu-button").show();
+                    
+                    }
+                    else if ($(this).width() >= 480) {
+                        if (!open) {
+                            $("#menu-restaurant").show();
+                        }
+                        $("#menu-button").hide();
+                    
+                    }
+                }
+
+                function setupMenuButton() {
+                    $("#menu-button").click(function(e) {
+                        e.preventDefault();
+
+                        if (open) {
+                            $("#menu-restaurant").fadeOut();
+                            $("#menu-button").toggleClass("selected");
+                        }
+                        else {
+                            $("#menu-restaurant").fadeIn();
+                            $("#menu-button").toggleClass("selected");
+                        }
+                        open = !open;
+                    });
+                }
+
+
+                $(window).resize(resizeMenu);
+
+                resizeMenu();
+                setupMenuButton();
+            });
+
+	   </script>
+
+</body>
+</html>

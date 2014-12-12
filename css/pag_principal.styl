@@ -1,0 +1,131 @@
+escarlata = #bd1d1e
+gris_oscuro = #444
+
+@import url(http://fonts.googleapis.com/css?family=Arimo:400,700);
+
+/*Para que funcione nib: degradados*/
+@import 'nib/vendor'
+@import 'nib/gradients'
+
+
+
+/*Prefijos propietarios*/
+vendor-prefixes = o ms moz webkit 
+
+
+	#contenedor
+		margin 0 auto
+		max-width 1000px
+		
+body
+	background #EAE5E1
+					
+/*   Contenido Pagina Princial  */
+
+	.contenido
+		margin 1em
+	/*  Img Principal  */	
+		.banner
+			margin-bottom 1em
+			
+			.imagen
+				margin 0
+				padding 0	
+				img
+					vertical-align top
+					width 100%
+					box-shadow 0px 0px 5px rgba(68,68,68,0.4)
+					
+	/* Fin Img principal */	
+						
+						
+		.secciones
+			
+			padding 0
+			
+		
+			.seccion
+				display inline-block
+				margin 0 0 1em 0
+				padding 0
+				width 100%	
+				bacground rgba(227, 222, 217, 0.3)
+				box-shadow 1px 1px 5px rgba(68,68,68,0.2)
+	
+			
+				h2
+					color escarlata
+					font-family:"Times New Roman", Times, serif;
+					font-size 23px
+					margin 0
+					padding 0.5em 0.5em 0 0.5em
+				p
+				
+					color gris_oscuro
+					font-family: 'Arimo', sans-serif;
+					font-size 13px
+					line-height 150%
+					margin 0.8em 0
+					text-align left
+					padding 0 0.3em 0 0.3em
+					
+				a
+					color escarlata
+					font-family: 'Arimo', sans-serif;
+					font-size 12px
+					margin 0
+					padding 0.5em 0.3em
+					text-decoration none
+					background-color rgba(221, 211, 202, 0.5)
+					display block
+					border-radius 0 0 2px 2px
+					&:hover
+						background-color red
+						box-shadow 0px 2px 5px rgba(68,68,68,0.4)
+						color white
+						text-shadow 1px 1px 2px #B4AFAD
+				
+
+/*   Responsive   */	
+
+			
+
+@media screen and (min-width: 480px)
+
+	.banner
+			margin-bottom 0em
+	.secciones
+
+	
+		.seccion		
+			margin 0.5em 0.5em
+			width 46%
+			&:nth-child(even)
+				
+				float right
+		#medio
+			width 97%
+			
+
+			
+
+@media screen and (min-width: 767px)
+
+	.secciones
+
+		.seccion		
+			margin 0.5em 0.5em
+			
+			width 31%
+			&:nth-child(even)
+				float none
+				
+			&:last-child
+				margin 0 0 0 0.5em
+		#medio
+			width 31%
+				
+				
+
+
+		
