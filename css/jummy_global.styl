@@ -1,0 +1,211 @@
+escarlata = #bd1d1e
+gris_oscuro = #444
+
+@import url(http://fonts.googleapis.com/css?family=Arimo:400,700);
+
+/*Para que funcione nib: degradados*/
+@import 'nib/vendor'
+@import 'nib/gradients'
+
+
+
+/*Prefijos propietarios*/
+vendor-prefixes = o ms moz webkit 
+
+
+
+footer
+	background #DDD3CA
+	color rgba(gris_oscuro,0.8)
+	font-family:Arial, Helvetica, sans-serif;
+	font-size 12px
+	font-weight normal
+	height 45px
+	margin 0 
+	padding 0.5em
+	text-align center
+	width 100%
+	.guion
+		&:before
+			content " - "
+			
+
+header
+	
+	
+	#logo
+		width 120px
+		display inline-block
+		margin 1em 1em 0.5em 1em
+	
+		img
+			/*width 120px*/
+			width 100%
+
+/*   Menu Navegación   */
+
+/*Movil*/
+#menu-nav
+	display inline-block  /*display: table-cell*/
+	vertical-aling bottom
+	text-align right
+	margin 1.7em 0.5em 0.5em 2em
+	
+#menu-button
+	vertical-aling bottom
+	float right
+	cursor pointer
+	transition all .2s linear
+	border-radius 2px
+	box-shadow 0 1px 1px rgba(0, 0, 0, 0.3)
+	background-color escarlata	
+
+
+	padding 0.5em
+	background-position left bottom
+	background-repeat: repeat-x
+	
+#menu-button.selected,
+#menu-button:active
+	background-color: escarlata
+	box-shadow 0 1px 1px rgba(0, 0, 0, 0.3)
+	opacity 0.7
+	/*al hacer click el menu aparece*/
+	/*margin-bottom 1.5em*/
+
+
+/*imagen boton movil*/
+#menu-button-inner
+	background transparent url(../img/menu-bg.png) no-repeat 0 0
+	width 78px
+	height 41px
+	
+	
+/*menu completo */
+
+#menu-restaurant
+	/*clear both*/
+	display none
+	position absolute
+	background-color: rgba(88, 88, 88, 0.5)
+	width 100%
+	box-shadow: 0 2px 2px rgba(88, 88, 88, 0.5)
+	
+	
+	ul
+		overflow hidden
+		list-style none
+		margin 0
+		padding 0
+		text-align center
+		li
+			background #9C705A
+			background linear-gradient(#A98B7C, #9C705A, #72422A)
+			display inline-block
+			height 45px
+			margin-bottom 0.3em
+			width 100%		
+			&:hover
+				background #dd1819	
+				
+			&:active
+				background red
+			a
+				color white
+				font-family: 'Arimo', sans-serif;
+				padding 0
+				margin 0
+				text-decoration none
+				
+				
+				
+
+				
+				
+				h2
+					font-size 18px
+					font-weight bold
+					margin 0
+					padding 3px 0 0 0 
+						
+				h5
+					font-size 13px
+					font-weight normal
+					margin 0
+					padding 0	
+					
+/*   Fin Menu Navegación   */	
+
+	
+/*   Responsive   */	
+@media screen and (min-width: 480px)
+
+	header
+		
+		#logo
+			margin 1em auto
+			display block
+
+		#menu-restaurant
+			
+			position relative
+			margin-top -2.3em
+			background-color: rgba(white, 0)
+			box-shadow: 0 0 0 rgba(white, 0)
+			
+			ul
+				li
+					width 22%
+	
+
+@media screen and (min-width: 767px)
+
+	#contenedor
+		margin 0 auto
+		max-width 1000px
+
+	header
+		
+
+		#logo
+
+		
+			margin 1.5em 0.7em 1em 0.7em
+			float left
+		
+			
+			
+			
+		#menu-restaurant
+			margin -1.2em 0
+			padding 0
+			position static
+			
+	
+
+			ul
+	
+				li
+					height 93px
+					margin-bottom 0
+					margin-left 5px
+					width 18%
+					
+					
+					a	
+				
+
+						h2
+							font-size 23px
+							margin 0
+							padding 1em 0.2em 0.2em 0.2em
+							
+						h5
+							font-size 14px
+							margin 0
+							padding 0 0.2em
+
+				
+			
+
+
